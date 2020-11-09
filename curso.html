@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<script src="public/js/jquery.js"></script>
+	<script src="curso.js"></script>	
+	<meta charset="utf-8">
+	<title>prototipo</title>
+	<!--<link rel= "stylesheet" type="text/css" href="style.css">-->
+	<link href="public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container" name="principal" id="principal">
+		<h1 style="text-align: center;">Vizualizar curso</h1>
+		<h3 style="text-align: center">Digite o codigo do curso no campo a seguir para vizualizar </h3>
+		<br>
+		<form id="fcodigo" name="fcodigo" style="text-align: center">
+			<input type="text" id="icod" name="icod" placeholder="digite o codigo" style="width: 60%">
+			<br><br>
+			<button id="ver" name="ver" class="w3-btn">ver curso</button>
+		</form>
+		<h1 id="titulo_curso" style="text-align: center;"></h1>
+		<br><br>
+		<table align="center" border="1px" style="width:1000px; line-height:40px;" id="tabela" name="tabela">
+			<tr>
+				<th>titulo</th>
+				<th>tema</th>
+				<th>tipo</th>
+				<th>descrição</th>
+				<th>link</th>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

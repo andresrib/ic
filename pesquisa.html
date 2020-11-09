@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>prototipo</title>
+	<!--<link rel= "stylesheet" type="text/css" href="style.css">-->
+	<link href="public/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container">
+		<form action="ajax/pesquisa.php" method="post">
+			<h1>Preencha os campos para pesquisar por um link</h1>
+			<br><br>
+			<input id="titulo" name="titulo" type="text" class="form-control" placeholder="digite o titulo">
+			<br><br>
+			<input id="link" name="link" type="text" class="form-control" placeholder="digite um link">
+			<br><br>
+			<input id="tema" name="tema" type="text" class="form-control" placeholder="digite o tema">
+			<br><br>
+			<select id="dificuldade" name="dificuldade">
+	 			<option value="basico">Basico</option>
+				<option value="Intermediario">Intermediário</option>
+				<option value="Avancado">Avançado</option>
+			</select>
+			<br><br>
+			<input id="usuario" name="usuario" type="text" class="form-control" placeholder="digite o seu nome">
+			<br><br>
+			<input id="descricao" name="descricao" type="text" class="form-control" maxlength="150" placeholder="digite a descrição(maximo de 150 caracteres)">
+			<br><br>
+			<button name="Pesquisar" class="w3-btn">Pesquisar</button>
+		</form>
+</html>
