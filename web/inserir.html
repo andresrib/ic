@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style type="text/css">
+		body{
+		background-image: url('imagens/fundo_secundario.png');
+		background-position: top !important;
+	  	background-repeat: no-repeat;
+	 	background-size: cover !important;
+		max-width: 100%;
+		max-height: 100%
+	}
+	input[type=text]{
+			border: 2px solid red;
+  			border-radius: 4px;
+  			background-color: white;
+  			height: 4%;
+	}
+	select{
+			width: 100%; /* Tamanho do select, maior que o tamanho da div "div-select" */   
+			height:4%; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */   
+			border:2px solid red;
+	}
+	.container{
+		text-align: center;
+	}
+	button{
+		width: 100%;
+		height: 60%;
+		font-size: 30px;
+		background-color: transparent;
+		color: black;
+		border-color: red;
+		border-radius: 30px;
+		border-width: 5px;
+		font-weight: bold;
+	}
+</style>
+<head>
+	<script src="public/js/jquery.js"></script>
+	<meta charset="utf-8">
+	<title>prototipo</title>
+	<!--<link rel= "stylesheet" type="text/css" href="style.css">-->
+	<link href="public/css/bootstrap.min.css" rel="stylesheet">
+	<script src="ajax/inserts.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<form>
+			<h1>Preencha os campos para adicionar um link</h1>
+			<br><br>
+			<input id="titulo" name="titulo" type="text" class="form-control" placeholder="digite o titulo">
+			<br><br>
+			<input id="link" name="link" type="text" class="form-control" placeholder="digite um link">
+			<br><br>
+			<input id="tema" name="tema" type="text" class="form-control" placeholder="digite o tema">
+			<br><br>
+			<select id="tipo" name="tipo">
+	 			<option value="Texto">Texto</option>
+				<option value="Video">Video</option>
+				<option value="Exercico">Exercício</option>
+				<option value="Audio">Áudio</option>
+				<option value="Variados">Variados</option>
+			</select>
+			<br><br>
+			<select id="dificuldade" name="dificuldade">
+	 			<option value="Basico">Basico</option>
+				<option value="Intermediario">Intermediário</option>
+				<option value="Avancado">Avançado</option>
+			</select>
+			<br><br>
+			<input id="usuario" name="usuario" type="text" class="form-control" placeholder="digite o seu nome">
+			<br><br>
+			<input id="descricao" name="descricao" type="text" class="form-control" maxlength="150" placeholder="digite a descrição(maximo de 150 caracteres)">
+			<br><br>
+			<button name="envio" id="envio">Enviar</button>
+		</form>
+		<br><br><br>
+		<a href="http://localhost/web/"><button id="voltar">voltar a pagina inicial</button></a>
+	</div>
+<footer>
+	<!--<script src="script_prototipo.js"></script>-->
+	<script src="public/js/bootstrap.bundle.min.js"></script>
+	<!--<script src="ajax/inserts.php"></script>-->
+</footer>
+</body>
+</html>

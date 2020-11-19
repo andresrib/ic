@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+<style type="text/css">
+		body{
+		background-image: url('imagens/fundo_secundario.png');
+		background-position: top !important;
+	  	background-repeat: no-repeat;
+	 	background-size: cover !important;
+		max-width: 100%;
+		max-height: 100%
+	}
+	button{
+		width: 100%;
+		font-size: 30px;
+		background-color: transparent;
+		color: black;
+		border-color: red;
+		border-radius: 20px;
+		border-width: 5px;
+		font-weight: bold;
+	}
+	table{
+			text-align: center;
+			font-weight: bold;
+			border-collapse: collapse;
+		}
+		tbody tr:nth-child(odd) {
+ 			background-color: yellow;
+		}
+
+		tbody tr:nth-child(even) {
+			background-color: lightgrey;
+		}
+</style>
+<head>
+	<script src="public/js/jquery.js"></script>
+	<script src="curso.js"></script>	
+	<meta charset="utf-8">
+	<title>prototipo</title>
+	<!--<link rel= "stylesheet" type="text/css" href="style.css">-->
+	<link href="public/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container" name="principal" id="principal">
+		<h1 style="text-align: center;">Vizualizar curso</h1>
+		<h3 style="text-align: center">Digite o codigo do curso no campo a seguir para vizualizar </h3>
+		<br>
+		<form id="fcodigo" name="fcodigo" style="text-align: center">
+			<input type="text" id="icod" name="icod" placeholder="digite o codigo" style="width: 60%">
+			<br><br>
+			<button id="ver" name="ver" class="w3-btn">ver curso</button>
+		</form>
+		<h1 id="titulo_curso" style="text-align: center;"></h1>
+		<br><br>
+		<table align="center" border="1px" style="width:1000px; line-height:40px;" id="tabela" name="tabela">
+			<tr>
+				<th>titulo</th>
+				<th>tema</th>
+				<th>tipo</th>
+				<th>descrição</th>
+				<th>link</th>
+			</tr>
+		</table>
+		<br><br><br>
+		<a href="http://localhost/web/"><button id="voltar">voltar a pagina inicial</button></a>
+	</div>
+</body>
+</html>
