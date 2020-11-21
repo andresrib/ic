@@ -202,14 +202,14 @@ $result = mysqli_query($conn, $query);
 							$link = $rows["link"];
 					?>
 							<tr class="apagar">
-								<td><?php echo $rows["titulo"];?></td>
-								<td><?php echo $rows["tema"];?></td>
-								<td><?php echo $rows["tipo"];?></td>
-								<td><?php echo $rows['dificuldade']; ?></td>
-								<td><?php echo $rows['nome']; ?></td>
-								<td><?php echo $rows['descricao']; ?></td>
-								<td><a href=<?php echo $rows["link"]; ?>>Acessar</a></td>
-								<td><button class="cheque" id=<?php echo $rows["id"];?>>adicionar</button></td>
+								<td><?= $rows["titulo"]; ?></td>
+								<td><?= $rows["tema"]; ?></td>
+								<td><?= $rows["tipo"]; ?></td>
+								<td><?= $rows['dificuldade']; ?></td>
+								<td><?= $rows['nome']; ?></td>
+								<td><?= $rows['descricao']; ?></td>
+								<td><a class="btn btn-success" href="<?= $rows["link"]; ?>" target="_blank">Acessar</a></td>
+								<td><button class="cheque" id=<?= $rows["id"]; ?>>adicionar</button></td>
 							</tr>
 					<?php
 						}

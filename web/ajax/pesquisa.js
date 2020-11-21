@@ -28,9 +28,9 @@ $(document).ready(function(){
 				add_controls += `<td>${x[i][3]}</td>`
 				add_controls += `<td>${x[i][4]}</td>`
 				add_controls += `<td>${x[i][5]}</td>`
-				add_controls += `<td><a href=${x[i][6]}>Acessar</a></td>`
+				add_controls += `<td><a class="btn btn-success" target="_blank" href="${x[i][6]}">Acessar</a></td>`
 				add_controls += `<td>`
-				add_controls += `<button class="cheque" id=${x[i][8]}>adicionar</button>`
+				add_controls += `<button class="cheque" id="${x[i][8]}">adicionar</button>`
 				add_controls += `</td>`
 				add_controls += "</tr>";
 				$("#tabela").append(add_controls);
@@ -72,21 +72,26 @@ $(document).ready(function(){
 				//alert(verifica);
 			}
 			else{
-				var adicina_controle = `<tr class="visualizado" id = ${x[7]}>`
+				var adicina_controle = `<tr class="visualizado" id="remover-${x[7]}">`
 					adicina_controle += `<td>${x[0]}</td>`
 					adicina_controle += `<td>${x[1]}</td>`
 					adicina_controle += `<td>${x[2]}</td>`
 					adicina_controle += `<td>${x[3]}</td>`
 					adicina_controle += `<td>${x[4]}</td>`
 					adicina_controle += `<td>${x[5]}</td>`
-					adicina_controle += `<td><a href=${x[6]}>Acessar</a></td>`
-					adicina_controle += `<td><button class="remover" id=${x[7]}>remover</button></td>`
+					adicina_controle += `<td><a class="btn btn-success" target="_blank" href="${x[6]}">Acessar</a></td>`
+					adicina_controle += `<td><button class="remover" data-id="#remover-${x[7]}">remover</button></td>`
 					adicina_controle += "</tr>";
 					$("#aula").append(adicina_controle);
 					ids_codigo += "|";
 					ids_codigo += x[7];
 					
 					//alert(ids_codigo);
+
+				$('.remover').on('click', function(e){
+					let dataId = $(this).data('id');
+					$(dataId).remove();
+				});
 			}
 		});
 	});
@@ -99,9 +104,6 @@ $(document).ready(function(){
 		identifica = "#" + String(identifica);
 		$(".visualizado").remove(identifica);
 	});*/
-	$('.remover').on('click', function(e){
-		alert("função chamada");
-	});
 	$('#criaAula').on('click', function(e){
 		var nome_curso = $("#nome_curso").val();
 		var codigo_do_curso = nome_curso + ids_codigo;
