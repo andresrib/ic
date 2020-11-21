@@ -1,0 +1,30 @@
+body{
+    background-image: url('../imagens/fundo_secundario_menor.png');
+    background-position: top !important;
+      background-repeat: no-repeat;
+     background-size: cover !important;
+    max-width: 100%;
+    max-height: 100%
+}
+button{
+    width: 100%;
+    font-size: 30px;
+    background-color: transparent;
+    color: black;
+    border-color: red;
+    border-radius: 20px;
+    border-width: 5px;
+    font-weight: bold;
+}
+table{
+    text-align: center;
+    font-weight: bold;
+    border-collapse: collapse;
+}
+tbody tr:nth-child(odd) {
+    background-color: yellow;
+}
+
+tbody tr:nth-child(even) {
+    background-color: lightgrey;
+}

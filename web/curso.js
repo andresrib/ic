@@ -21,17 +21,16 @@ $(document).ready(function(){
 		}).done(function(resultado){
 			//resultado = resultado.substring(1);
 			$(".apagar").remove();
+			$("#tabela").empty();
 			var x = JSON.parse(resultado);
 			for(var i=0; i<x[0][5]; i++){
 				var add_controls = '<tr class="apagar">'
-				add_controls += `<td>${x[i][0]}</td>`
-				add_controls += `<td>${x[i][1]}</td>`
-				add_controls += `<td>${x[i][2]}</td>`
-				add_controls += `<td>${x[i][3]}</td>`
-				add_controls += `<td>`
-				add_controls +=	`<a href=${x[i][4]}><input type="button" value="Acesso" /></a>`
-				add_controls += `</td>`
-				add_controls += `</tr>`;
+				add_controls += '<td>'  + x[i][0] +  '</td>'
+				add_controls += '<td>'  + x[i][1] +  '</td>'
+				add_controls += '<td>'  + x[i][2] +  '</td>'
+				add_controls += '<td>' + x[i][3] + '</td>'
+				add_controls += '<td><a class="btn btn-success" target="_blank" href="' + x[i][4] + '">Acesso</a></td>';
+				add_controls += '</tr>';
 				$("#tabela").append(add_controls);
 			}
 			//for(var i=0; i<x[0][4]){

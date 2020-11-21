@@ -240,7 +240,7 @@ $result = mysqli_query($conn, $query);
 			<h3 style="text-align: center;">codigo:</h3>
 			<h2 id = "codigo" name = "codigo" style="text-align: center;">-</h2>
 			<h4>Mande o código para os alunos para que o curso possa ser acessado por eles</h4>
-			<a href="http://localhost/web/"><button id="voltar">voltar a pagina inicial</button></a>
+			<a href="/"><button id="voltar">voltar a pagina inicial</button></a>
 
 
 		</div>
