@@ -8,7 +8,7 @@ $result = mysqli_query($conn, $query);
 <html lang = "pt-br">
 	<style type="text/css">
 		body{
-		background-image: url('imagens/fundo_secundario.png');
+		background-image: url('imagens/fundo_secundario_menor.png');
 		background-position: top !important;
 	  	background-repeat: no-repeat;
 	 	background-size: cover;
